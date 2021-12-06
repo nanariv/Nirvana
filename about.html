@@ -1,0 +1,72 @@
+<head>
+  <link rel="stylesheet" href="/css/home.css">
+  <link rel="stylesheet" href="/css/about.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script>
+    function checkLogin() {
+    var element = document.getElementById("loginNav");
+    var temp = sessionStorage.getItem('loginTemp')
+    temp == "true" ? element.classList.add("hide") : null;
+    var element2 = document.getElementById("logoutNav");
+    temp == "true" ? element2.classList.remove("hide") : null;
+}
+var path="";
+            if (document.currentScript) {
+              path= document.currentScript.src;
+            } else {
+              var scripts = document.getElementsByTagName('script');
+              path= scripts[scripts.length - 1].src;
+            }
+      
+        var pathname = path.substr(0,path.lastIndexOf('/', path.lastIndexOf('/')-1));
+        var urlPathname = "http://127.0.0.1:5000";
+  function contactNav() {
+    window.location.replace(pathname+'/contact.html');
+  }
+  function orders() {
+    window.location.replace(pathname+'/orders.html');
+  }
+  function aboutNav() {
+      window.location.replace(pathname+'/about.html');
+  }
+  </script>
+  <style>
+  </style>
+</head>
+<body onload="checkLogin()">
+  <header id="header">
+    <div class="topnav" id="myTopnav">
+    <a href="#"><img class="logo" src="images/logo.jpg" alt=""></a>
+    <a id="active"></a>
+    <a href="/home.html" class="active">HOME</a>
+    <a href="/catalog.html">CATALOG</a>
+    <a id="loginNav" href="/login.html"><span>LOGIN</span></a>
+    <a id="logoutNav" class="hide" onclick="logout()"><span>LOGOUT</span></a>
+    <div class="activate"><a href="#" style="float:right;padding: 24px 2px;"><i class="fa fa-user-circle-o"></i></a>
+    <div class="subcategory">
+        <ul>
+         <li><a class="profile" href="/profile.html">Profile</a></li>
+         <li onclick="orders()">Orders</li>
+         <li onclick="contactNav()">Contact</li>
+         <li onclick="aboutNav()">Meet the team</li>    
+        </ul>  
+    </div>
+    </div>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="NavBar()">&#9776;</a>
+    </div>
+    </header>
+<div id="about">
+  <div class="about">
+    <img src="images/harini.jpeg" alt="">
+    <h2>Harini Rangarajan</h2>
+  </div>
+  <div class="about">
+    <img src="images/nan.jpg" alt="" style="flex-grow: 1">
+    <h2>Nandhini Arivarignan</h2>
+  </div>
+  <div class="about">
+    <img src="images/rishu.jpeg" alt="">
+    <h2>Rishu Singh</h2>
+  </div>
+</div>
+</body>

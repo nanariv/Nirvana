@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--TITLE-->
+<title>Website</title>
+
+<!--SHORTCUT ICON-->
+<link rel="shortcut icon" href="">
+
+<!--META TAGS-->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cairo:wght@200;300;400;600&family=Pacifico&family=Signika+Negative:wght@700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Lora:wght@400;500&display=swap" rel="stylesheet"> 
+
+<!--FONT AWESOME-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <script type="text/javascript" src="/js/login.js"></script>
+<script type="text/javascript" src="/js/home.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/css/home.css">
+<script>
+</script>
+</head>
+
+<body onload="checkLogin()">
+
+<header id="header">
+<div class="topnav" id="myTopnav">
+<a href="#"><img class="logo" src="images/logo.jpg" alt=""></a>
+<a id="active"></a>
+<a href="/home.html" class="active">HOME</a>
+<a href="/catalog.html">CATALOG</a>
+<a id="loginNav" href="/login.html"><span>LOGIN</span></a>
+<a id="logoutNav" class="hide" onclick="logout()"><span>LOGOUT</span></a>
+<div class="activate"><a href="#" style="float:right;padding: 24px 2px;"><i class="fa fa-user-circle-o"></i></a>
+<div class="subcategory">
+    <ul>
+     <li><a class="profile" href="/profile.html">Profile</a></li>
+     <li onclick="orders()">Orders</li>
+     <li onclick="contactNav()">Contact</li>
+     <li onclick="aboutNav()">Meet the team</li>    
+    </ul>  
+</div>
+</div>
+<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="NavBar()">&#9776;</a>
+</div>
+</header>
+
+
+
+
+<!--CONTAINER-->
+<div class="container">
+<div class="sale-img"></div>
+<section class="landing">
+<h1 class="title-2">Come in!</h1>
+<h5 class="sub-title">We're open</h5>
+</section>
+<img src="https://i.ibb.co/t842sLk/shape.png">
+</div>
+
+
+
+<!--SECTION1-->
+<div class="sections section1">
+<section>
+<img src="images/totebags.jpg" alt="">
+</section>
+<section>
+<h1 class="title">Welcome to Bags Nirvana</h1>
+<p>At Bagshop, we offer a great selection of merchandise including handbags, luggage, wallets, coats, slippers, lingerie, sleepwear, hosiery, and much more! Our premier brand Longchamp, features all styles and colors of luggage, leather handbags, Longchamp Le Pliage folding bags, and the new Neo nylon bags. Our customers love all the different colors and styles of Longchamp handbags, wallets and accessories that we have to offer. Besides Longchamp, we also carry Tumi, Sorial totes, Lancaster, Christopher.Kon, Botkier, Urban Expressions as well as many other popular handbag designers.</p>
+<!-- <a href="#" class="btn2">CONTACT US</a> -->
+</section>
+</div>
+
+
+<div class="sections section2">
+<div class="title_header">
+<h1> Products Preview</h1>
+<h5>We offer something different to local and foreign patrons and ensure you enjoy a memorable shopping experience every time.</h5>
+</div>
+<div style="text-align: center">
+    <span>Best Region:</span> 
+    <span id="region"></span>
+</div>
+<div style="text-align: center">
+    <span>Total Orders:</span> 
+    <span id="orders"></span>
+</div>
+<section class="Cards" id="topBags">
+    
+</section>
+</div>
+
+
+
+
+<!--SECTION3-->
+<section class="section3">
+<div class="title_header">
+<h1 class="title-2">Real Taste</h1>
+<h5 class="sub-title">A woman's handbag is an integral part of her outfit. A handbag is more than just a sack to carry essentials. It's a fashion statement, a way to express her style and creativity. Handbags come in many shapes, sizes, colors, prices and labels.
+</h5>
+</div>
+</section>
+
+</body>
+
+
+
+
+
+<!--FOOTER-->
+<footer>
+<div class="footer">
+<div class="row">
+<a href="#"><i class="fa fa-facebook"></i></a>
+<a href="#"><i class="fa fa-instagram"></i></a>
+<a href="#"><i class="fa fa-youtube"></i></a>
+<a href="#"><i class="fa fa-twitter"></i></a>
+</div>
+
+<div class="row">
+<ul>
+<li><a href="#">Contact us</a></li>
+<li><a href="#">Our Services</a></li>
+<li><a href="#">Privacy Policy</a></li>
+<li><a href="#">Terms & Conditions</a></li>
+<li><a href="#">Career</a></li>
+</ul>
+</div>
+
+<div class="row">
+Copyright © 2021 name - All rights reserved
+</div>
+</div>
+</footer>
+</html>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

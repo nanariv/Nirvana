@@ -1,0 +1,57 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="/js/login.js"></script>
+    <script type="text/javascript" src="/js/home.js"></script>
+  </head>
+  <header id="header">
+    <div class="topnav" id="myTopnav">
+    <a href="#"><img class="logo" src="images/logo.jpg" alt=""></a>
+    <a id="active"></a>
+    <a href="/home.html" class="active">HOME</a>
+    <a href="/catalog.html">CATALOG</a>
+    <a id="loginNav" href="/login.html"><span>LOGIN</span></a>
+    <a id="logoutNav" class="hide" onclick="logout()"><span>LOGOUT</span></a>
+    <div class="activate"><a href="#" style="float:right;padding: 24px 2px;"><i class="fa fa-user-circle-o"></i></a>
+    <div class="subcategory">
+        <ul>
+         <li><a class="profile" href="/profile.html">Profile</a></li>
+         <li onclick="orders()">Orders</li>
+         <li onclick="contactNav()">Contact</li>
+         <li onclick="aboutNav()">Meet the team</li>    
+        </ul>  
+    </div>
+    </div>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="NavBar()">&#9776;</a>
+    </div>
+    </header>
+<form class="login">
+
+    <fieldset>
+  
+      <h5 class="legend">Login</h5>
+  
+      <div class="input">
+        <input type="email" id="email-login" placeholder="Email" required />
+        <span><i class="fa fa-envelope-o"></i></span>
+      </div>
+  
+      <div class="input">
+        <input type="password" id="password-login" placeholder="Password" required />
+        <span><i class="fa fa-lock"></i></span>
+      </div>
+  
+      <span class="submit" onclick="submitLogin()">Submit</span>
+      <br/>
+      <span class="notuser">Not a user?</span>
+      <span onclick="signUp()"><b style="cursor: pointer">Signup</b></span>
+  
+    </fieldset>
+  
+     <div id="feedback">
+      Login Successful <br />
+      Redirecting...
+    </div>
+  
+  </form>

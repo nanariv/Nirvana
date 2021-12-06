@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <!--TITLE-->
+        <title>Website</title>
+
+        <!--SHORTCUT ICON-->
+        <link rel="shortcut icon" href="">
+
+        <!--META TAGS-->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+        <!--GOOGLE FONTS-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cairo:wght@200;300;400;600&family=Pacifico&family=Signika+Negative:wght@700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Lora:wght@400;500&display=swap" rel="stylesheet"> 
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+        <!--FONT AWESOME-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="/js/admin.js"></script>
+        <link rel="stylesheet" type="text/css" href="/css/home.css">
+        <link rel="stylesheet" type="text/css" href="/css/admin.css">
+    </head>
+    <body onload="checkLogin()">
+        <header id="header">
+            <div class="topnav" id="myTopnav">
+            <a href="#"><img class="logo" src="images/logo.jpg" alt=""></a>
+            <a id="loginNav" href="/login.html"><span>LOGIN</span></a>
+            <a id="logoutNav" class="hide" onclick="logout()"><span>LOGOUT</span></a>
+            </div>
+            </header>
+        <div class="container">
+            <div class="product">
+                <label>Product ID
+                    <input class="full-width" id="prodID" type="text" required>
+                </label>
+                <label>Product Name
+                    <input class="full-width" id="prodName" type="text" required>
+                </label>
+                <label>Product Type
+                    <input class="full-width" id="prodType" type="text" required>
+                </label>
+                <label>Cost Price
+                    <input class="full-width" id="cPrice" type="text" required>
+                </label>
+                <label>SellingPrice
+                    <input class="full-width" id="sPrice" type="text" required>
+                </label>
+                <label>Color
+                    <input class="full-width" id="color" type="text" required>
+                </label>
+                <button onclick="insertProd()">Insert Product</button>
+                <button onclick="updateProd()">Update Product</button>
+            </div>
+            <div class="seller">
+                <label>Seller ID
+                    <input class="full-width" id="sellerID" type="text" required>
+                </label>
+                <label>Product ID
+                    <input class="full-width" id="productID" type="text" required>
+                </label>
+                <label>Seller Name
+                    <input class="full-width" id="sellerName" type="text" required>
+                </label>
+                <label>Seller Address
+                    <input class="full-width" id="sellerAdd" type="text" required>
+                </label>
+                <label>Instock Qty
+                    <input class="full-width" id="qty" type="text" required>
+                </label>
+                <label>Region
+                    <input class="full-width" id="region" type="text" required>
+                </label>
+                <button onclick="insertSeller()">Insert Seller</button>
+                <button onclick="updateSeller()">Update Seller</button>
+            </div>
+            <h4>Delete Seller and Product</h4>
+            <div class="delete">
+                <label>Product ID
+                    <input class="full-width" id="product1ID" type="text" required>
+                </label>
+                <button onclick="deleteSeller()">Delete</button>
+            </div>
+            <div id="catalog">
+                
+            </div>
+        </div>
+    </body>
+</html>

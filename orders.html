@@ -1,0 +1,192 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATA TABLE</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <style>
+        #showData tr {
+            text-align: center;
+        }
+
+        table {
+            position: relative;
+            margin: 0 auto;
+        }
+
+        th,
+        td {
+            border: 1px solid grey;
+            border-collapse: collapse;
+            padding: 6px 0;
+            color: #8c6239;
+            text-align: center;
+        }
+
+        .tooltip {
+            position: relative;
+        }
+
+        .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 58%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        .tooltip:hover+.tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        #error {
+            position: absolute;
+            top: 50%;
+            transform: (50%, 50%);
+            font-size: 30px;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .neon {
+            position: relative;
+            overflow: hidden;
+            filter: brightness(200%);
+        }
+
+        .text {
+            color: #684545;
+            font-size: 100px;
+            font-weight: bold;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            position: relative;
+            user-select: none;
+        }
+
+        .text::before {
+            content: attr(data-text);
+            position: absolute;
+            color: white;
+            filter: blur(0.02em);
+            mix-blend-mode: difference;
+        }
+
+        .gradient {
+            position: absolute;
+            background: linear-gradient(45deg, rgb(78, 78, 48), rgb(165, 147, 46), rgb(48, 73, 48), rgb(131, 116, 33), rgb(112, 112, 45));
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            mix-blend-mode: multiply;
+        }
+
+        .spotlight {
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle, white, transparent 25%) center / 25% 25%,
+                radial-gradient(circle, white, black 25%) center / 12.5% 12.5%;
+            animation: light 5s linear infinite;
+            mix-blend-mode: color-dodge;
+        }
+
+        @keyframes light {
+            to {
+                transform: translate(50%, 50%);
+            }
+        }
+        .subcategory ul li {
+            padding: 16px 10px !important;
+        }
+    </style>
+    <link rel="stylesheet" href="/css/home.css">
+    <script type="text/javascript" src="/js/orders.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body onload="orders()">
+    <header id="header">
+        <div class="topnav" id="myTopnav">
+        <a href="#"><img class="logo" src="images/logo.jpg" alt=""></a>
+        <a id="active"></a>
+        <a href="/home.html" class="active">HOME</a>
+        <a href="/catalog.html">CATALOG</a>
+        <a id="loginNav" href="/login.html"><span>LOGIN</span></a>
+        <a id="logoutNav" class="hide" onclick="logout()"><span>LOGOUT</span></a>
+        <div class="activate"><a href="#" style="float:right;padding: 24px 2px;"><i class="fa fa-user-circle-o"></i></a>
+        <div class="subcategory">
+            <ul>
+             <li><a class="profile" href="/profile.html">Profile</a></li>
+             <li onclick="orders()">Orders</li>
+             <li onclick="contactNav()">Contact</li>
+             <li onclick="aboutNav()">Meet the team</li>    
+            </ul>  
+        </div>
+        </div>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="NavBar()">&#9776;</a>
+        </div>
+        </header>
+
+    <table id="order-table" class="display hover" style="width:85%">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Customer ID</th>
+                <th>Order Date</th>
+                <th>Order Status</th>
+                <th>Shipping Address</th>
+                <th>Region</th>
+                <th>Delivery Date</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <div id="error" class="neon hide">
+        <span class="text">No orders placed yet! </span>
+        <span class="gradient"></span>
+        <span class="spotlight"></span>
+    </div>
+</body>
+
+</html>

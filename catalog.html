@@ -1,0 +1,134 @@
+<!--TITLE-->
+<title>Website</title>
+
+<!--SHORTCUT ICON-->
+<link rel="shortcut icon" href="">
+
+<!--META TAGS-->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cairo:wght@200;300;400;600&family=Pacifico&family=Signika+Negative:wght@700&display=swap"
+    rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Lora:wght@400;500&display=swap"
+    rel="stylesheet">
+
+<!--FONT AWESOME-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<style>
+    .activate:hover .subcategory {
+        right: 23% !important;
+    }
+
+    #error {
+        display: none;
+    }
+
+    #error.show {
+        display: block;
+        text-align: center;
+    }
+
+    .hide {
+        display: none;
+    }
+    .subcategory ul li .profile {
+    color: rgb(97, 96, 96);
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    position: relative;
+    padding: 0;
+    float: none;
+    margin: 0;
+  }
+
+</style>
+<link rel="stylesheet" href="/css/home.css">
+
+<script type="text/javascript" src="/js/login.js"></script>
+<script type="text/javascript" src="/js/catalog.js"></script>
+</head>
+
+<body onload="checkCatalogLogin()">
+
+    <!--TOP NAVIGATION-->
+    <header id="header" class="catalogHeader">
+        <div class="topnav" id="myTopnav">
+            <a href="#"><img class="logo" src="images/logo.jpg" alt=""></a>
+            <a id="active"></a>
+            <a href="/home.html" class="active">HOME</a>
+            <a href="/catalog.html">CATALOG</a>
+            <a id="loginNav" href="/login.html"><span>LOGIN</span></a>
+            <a id="logoutNav" class="hide" onclick="logout()"><span>LOGOUT</span></a>
+            <a href="#" id="search-btn" style="float:right;padding: 24px 2px;" onclick="openSearch()"><i
+                    class="fa fa-search" class="openBtn"></i></a>
+            <input type="text" id="search-value" name="" style="float:right;margin-top: 20px;padding: 4px 2px;"
+                placeholder="Search">
+            <div class="activate"><a href="#" style="float:right;padding: 24px 2px;"><i
+                        class="fa fa-user-circle-o"></i></a>
+                <div class="subcategory">
+                    <ul>
+                        <li><a class="profile" href="/profile.html">Profile</a></li>
+                        <li onclick="orders()">Orders</li>
+                        <li onclick="contactNav()">Contact</li>
+                        <li onclick="aboutNav()">Meet the team</li>
+
+                    </ul>
+                </div>
+            </div>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="NavBar()">&#9776;</a>
+            <a><span onclick="cart()">CART</span></a>
+        </div>
+    </header>
+
+
+
+
+
+    <div id="catalogID" class="sections section2" style="margin-top: 100px;">
+
+    </div>
+    <p id="error">No products found.</p>
+
+
+
+
+    <!--FOOTER-->
+    <footer>
+        <div class="footer">
+            <div class="row">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+
+            <div class="row">
+                <ul>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Career</a></li>
+                </ul>
+            </div>
+
+            <div class="row">
+                Copyright © 2021 name - All rights reserved
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+<script type="text/javascript" src="/js/home.js"></script>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="/js/orderDetails.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/home.css">
+<style>
+    tr, h4{
+        text-align: center;
+    }
+    table {
+        position: relative;
+        top: 30%;
+        margin: 0 auto;
+    }
+    th,td {
+        border: 1px solid grey;
+        border-collapse: collapse;
+        padding: 6px 0;
+        color: #8c6239;
+        text-align: center;
+    }
+    .table-wrap {
+        margin: 150px;
+    }
+    .cancel {
+        text-align: center;
+        padding: 20px;
+    }
+    .subcategory ul li {
+            padding: 16px 10px !important;
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body onload="fetchOrderDetails()">
+    <header id="header">
+        <div class="topnav" id="myTopnav">
+        <a href="#"><img class="logo" src="images/logo.jpg" alt=""></a>
+        <a id="active"></a>
+        <a href="/home.html" class="active">HOME</a>
+        <a href="/catalog.html">CATALOG</a>
+        <a id="loginNav" href="/login.html"><span>LOGIN</span></a>
+        <a id="logoutNav" class="hide" onclick="logout()"><span>LOGOUT</span></a>
+        <div class="activate"><a href="#" style="float:right;padding: 24px 2px;"><i class="fa fa-user-circle-o"></i></a>
+        <div class="subcategory">
+            <ul>
+             <li><a class="profile" href="/profile.html">Profile</a></li>
+             <li onclick="orders()">Orders</li>
+             <li onclick="contactNav()">Contact</li>
+             <li onclick="aboutNav()">Meet the team</li>    
+            </ul>  
+        </div>
+        </div>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="NavBar()">&#9776;</a>
+        </div>
+    </header>
+<div class="table-wrap">
+<h4>Billing Details</h4>
+<table id="billing-table" class="display hover" style="width:85%">
+    <thead>
+        <tr>
+            <th>Transaction ID</th>
+            <th>Order ID</th>
+            <th>Payment Method</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
+</table>
+
+<h4>Seller Details</h4>
+<table id="delivery-table" class="display hover" style="width:85%">
+    <thead>
+        <tr>
+            <th>Seller ID</th>
+            <th>Seller Name</th>
+            <th>Seller Address</th>
+            <th>Product ID</th>
+            <th>Region</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
+</table>
+</div>
+<div class="cancel">
+    <button onclick="cancelOrder()">Cancel Order</button>
+</div>
+</body>
+
+<!--FOOTER-->
+<footer>
+<div class="footer">
+<div class="row">
+<a href="#"><i class="fa fa-facebook"></i></a>
+<a href="#"><i class="fa fa-instagram"></i></a>
+<a href="#"><i class="fa fa-youtube"></i></a>
+<a href="#"><i class="fa fa-twitter"></i></a>
+</div>
+
+<div class="row">
+<ul>
+<li><a href="#">Contact us</a></li>
+<li><a href="#">Our Services</a></li>
+<li><a href="#">Privacy Policy</a></li>
+<li><a href="#">Terms & Conditions</a></li>
+<li><a href="#">Career</a></li>
+</ul>
+</div>
+
+<div class="row">
+Copyright © 2021 name - All rights reserved
+</div>
+</div>
+</footer>
+</html>
