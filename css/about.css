@@ -1,0 +1,100 @@
+#about * {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-transform: capitalize;
+  }
+  
+  #about {
+    display: flex;
+    margin: 150px 1rem 50px 1rem;
+  }
+  
+  .about {
+    display: flex;
+    width: 33.33%;
+    flex-direction: column;
+    border: 1px solid grey;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: grey;
+  }
+  
+  #aboutus {
+    font-family: "Baloo Bhai 2", cursive;
+    font-family: "Saira Stencil One", cursive;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  footer {
+    background-color: #232323;
+    color: white;
+    font-size: 90%;
+    letter-spacing: 0.5;
+    text-align: center;
+    padding: 2% 0%;
+  }
+  
+  img {
+    width: 100%;
+    border-radius: 0.8rem;
+  }
+
+  
+  h1 {
+    font-size: 4rem;
+  }
+  
+  .aboutus {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+  }
+  
+  .heading {
+    font-family: "Baloo Bhai 2", cursive;
+    margin: 0.5rem;
+    font-size: 2rem;
+    display: flex;
+    width: 100%;
+  }
+  
+  p {
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  #card {
+    display: flex;
+  }
+  
+  @media screen and (max-width: 700px) {
+    #about {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .about {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      border-top: 1px solid grey;
+      padding-top: 2rem;
+    }
+  
+    p {
+      border: none;
+    }
+  }
+  

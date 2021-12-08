@@ -1,0 +1,25 @@
+.seller , .product, .delete {
+    padding: 40px 75px;
+    text-align: center;
+}
+.container {
+    height: 100%;
+    margin-top: 150px;
+    overflow: scroll !important;
+}
+h4 {
+    text-align: center;
+}
+.container section {
+    position: unset !important;
+    width: unset !important;
+    display: inline-block !important;
+}
+.container section .title-2 {
+    font-size: 14px;
+}
+
+
+#loginNav, #logoutNav {
+    padding-left: 118px;
+}
