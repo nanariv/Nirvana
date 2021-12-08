@@ -1,0 +1,634 @@
+{
+	"info": {
+		"_postman_id": "e68c7db7-297c-432a-9309-41a5685d35c0",
+		"name": "Database-Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "Harini",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "Harini123",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\" : \"rbradock1@apple.com\",\n    \"password\" : \"8g7ogSWrTib\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Name\" : \"Robb Bradock\",\n    \"Address\" : \"6 Ronald Regan Hill\",\n    \"Email\": \"rbrock2751@apple.com\",\n    \"Mobile\": \"432-235-4832\",\n    \"Password\": \"8g7ogSWrTib\",\n    \"Region\": \"North\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOrderDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"OrderID\" : \"31\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/getOrderDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getOrderDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBillingDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"OrderID\" : \"55\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/getBillingDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getBillingDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCustomerOrders",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerId\" : \"56\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/getCustomerOrders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getCustomerOrders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProductDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ProductID\" : \"Bag 1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/getProductDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getProductDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSellerDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ProductID\" : \"Bag 10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/getSellerDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getSellerDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ProductType\" : \"Sling\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/searchProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"searchProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCartDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"CustomerID\" : \"5\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/getCartDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getCartDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateBillingDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"CustomerID\" : \"55\",\n    \"OrderDate\" : \"2021-11-29\",\n    \"Return\" : \"0\",\n    \"ShippingAddress\" : \"d Avenue\",\n    \"Region\": \"North\",\n    \"PaymentMode\" : \"COD\",\n    \"Products\" : [\n        {\n            \"ProductID\":\"Bag 1\",\n            \"OrderQty\": \"5\"\n        },\n        {\n            \"ProductID\":\"Bag 7\",\n            \"OrderQty\": \"5\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/updateBillingDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"updateBillingDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllProducts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/getAllProducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getAllProducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCartDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"CustomerID\" : \"5\",\n    \"ProductID\" : \"Bag 10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/updateCartDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"updateCartDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchBestRegion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/fetchBestRegion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"fetchBestRegion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insertSellerDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"SellerName\" : \"Adams\",\n    \"SellerAddress\" : \"123 Walnut Street\",\n    \"ProductID\" : \"Bag 15\",\n    \"InstockQty\" : \"100\",\n    \"Region\" : \"North\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/insertSellerDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"insertSellerDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insertProductDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ProductID\" : \"Bag 15\",\n    \"ProductName\" : \"Anti theft Bags\",\n    \"ProductType\" : \"Laptop Bag\",\n    \"CostPrice\" : \"10\",\n    \"SellingPrice\" : \"25\",\n    \"Color\" : \"Grey\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/insertProductDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"insertProductDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchOrders",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"CustomerID\" : \"56\",\n    \"SearchKey\" : \"Shoulder\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/searchOrders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"searchOrders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCancelledOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"OrderID\" : \"3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/updateCancelledOrder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"updateCancelledOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkOrderQty",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ProductID\" : \"Bag 1\",\n    \"OrderQty\" : \"375\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/checkOrderQty",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"checkOrderQty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSellerProfits",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/getSellerProfits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getSellerProfits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "topProducts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/topProducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"topProducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateSellerDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Seller_ID\" : \"1\",\n    \"Seller_Name\" : \"Rogahariner\",\n    \"ProductID\" : \"Bag 10\",\n    \"InstockQty\" : \"90\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/updateSellerDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"updateSellerDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateProductDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"ProductID\":\"Bag 2\",\"ProductName\":\"\",\"ProductType\":\"\",\"CostPrice\":\"\",\"SellingPrice\":\"\",\"Color\":\"Black\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/updateProductDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"updateProductDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteProductDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ProductID\" : \"Bag 11\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/deleteProductDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"deleteProductDetails"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
