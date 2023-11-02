@@ -6,7 +6,7 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'root'
+app.config['MYSQL_PASSWOpRD'] = 'root'
 app.config['MYSQL_DATABASE'] = 'ecom-v4'
 mysql = MySQL(app)
 CORS(app)
