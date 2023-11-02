@@ -68,7 +68,7 @@ function checkPaymentLogin() {
     element2.classList.add("hide");
 }
 function redirectHome() {
-  window.location.href = pathname+"/home.html";
+  window.location.href = pathname+"/index.html";
 }
 function contactNav() {
   window.location.replace(pathname+'/contact.html');
